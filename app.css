@@ -14,8 +14,9 @@ div.loginPageMain
 /*logo*/
 .logoHR
 {
-    color: #ff8d3f;
+    color: #ff6600;
 }
+
 
 /* Show or hide Index page main div element */
 .show {
@@ -26,12 +27,15 @@ div.loginPageMain
     visibility: hidden !important;
 }
 
+
 /* configure top panel */
 header.topPanel{
     position: fixed;
     float: right;
     width:100%;
-    background-color: #353c3f;
+    background-color: black;
+    border-bottom : 5px solid #ff6600;
+    padding-bottom: 10px;
 }
 header.topPanel a{
     color: #ffffff;
@@ -91,19 +95,19 @@ div.panel1{
     background-color: #353c3f;
     color: #ffffff;
     height: 100%;
-    padding: 65px 150px 150px 150px;
+    padding: 82px 150px 150px 150px;
 }
 
 div.panel2{
     background-color: #ffffff;
     color: 	#353c3f;
     height: 100%;
-    padding: 65px 150px 150px 150px;
+    padding: 82px 150px 150px 150px;
 }
 
 /* Index page footer */
 footer.homePageFooter{
-    background-color: #353c3f;
+    background-color: black;
     color: #ffffff;
     padding: 25px;
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
