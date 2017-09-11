@@ -1,0 +1,70 @@
+body
+{
+    position: relative;
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Show or hide Index page main div element */
+.show {
+    display: block !important;
+}
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Configure login button */
+
+
+/* configure top panel */
+nav.topPanel{
+    background-color: #353c3f;
+}
+nav.topPanel a{
+    color: #ffffff;
+}
+nav.topPanel a.active{
+    color: #ff8d3f;
+  }
+
+/* Index page content headers */
+h1.homePageHeader{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* Index page introduction quotes */
+div.homeIntro{
+    padding: 150px;
+    color: #ff8d3f;
+}
+div.shownQuote{
+    float: left;
+}
+div.hiddenQuote{
+    float: right;
+}
+
+/* Index page panel effect */
+div.panel1{
+    background-color: #353c3f;
+    color: #ffffff;
+    height: 100%;
+    padding: 50px 150px 150px 150px;
+}
+
+div.panel2{
+    background-color: #ffffff;
+    color: 	#353c3f;
+    height: 100%;
+    padding: 50px 150px 150px 150px;
+}
+
+/* Index page footer */
+footer.homePageFooter{
+    background-color: #353c3f;
+    color: #ffffff;
+    padding: 25px;
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+}

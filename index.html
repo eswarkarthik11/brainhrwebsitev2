@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <title>BrainHR</title>
+
+  <!-- CSS stylesheets -->
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="libraries/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="libraries/fontawesome/css/font-awesome.css">
+
+  <!-- Javascript libraries -->
+  <script src="libraries/jquery-3.2.1.js"></script>
+  <script src="libraries/popper.js-1.12.5/dist/umd/popper.js"></script>
+  <script src="libraries/bootstrap/js/bootstrap.js"></script>
+  <script src="libraries/angular/angular.js"></script>
+  <script src="libraries/angular/angular-route.js"></script>
+  <script src="libraries/angular/angular-resource.js"></script>
+  <script src="libraries/angular/angular-cookies.js"></script>
+  <script src="app.js"></script>
+  <script src="login/login.js"></script>
+</head>
+
+<body ng-app="homePageApp" ng-controller="homeController" data-spy="scroll" data-target="#nav-topPanel2">
+
+<nav id="nav-topPanel1" class="navbar justify-content-end topPanel">
+  <a href="#!login" ng-click="homeVisibilityHide()">Login</a>
+</nav>
+<nav id="nav-topPanel2" class="navbar justify-content-end topPanel">
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="#navAboutUs" ng-click="homeVisibilityShow()">About Us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#navClients" ng-click="homeVisibilityShow()">Our Clients</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#navServices" ng-click="homeVisibilityShow()">Services</a>
+    <li class="nav-item">
+      <a class="nav-link" href="#navContactUs" ng-click="homeVisibilityShow()">Contact Us</a>
+    </li>
+  </ul>
+</nav>
+
+<div ng-class="homeVisibility">
+  <div class="container homeIntro">
+    <div id="quote1" ng-class="quote1Class">
+      <p>"Great vision without great people is irrelevant"</p>
+      <footer>Jim Collins</footer>
+    </div>
+    <div id="quote2" ng-class="quote2Class">
+      <blockquote class="blockquote-reverse">
+        <p>"You need to have a collaborative hiring process"</p>
+        <footer>Steve Jobs</footer>
+      </blockquote>
+    </div>
+    <div id="quote3" ng-class="quote3Class">
+      <blockquote class="blockquote-reverse">
+        <p>"If I say it once, it means that I have said it 100 times"</p>
+        <footer>Manik Baasha</footer>
+      </blockquote>
+    </div>
+    <input type="button" id="moveQuoteButton" value="clickme" ng-click="moveQuote()">
+  </div>
+
+  <div class="panel1" id="navAboutUs" >
+    <div role="tabpanel" aria-labelledby="nav-about-us-tab">
+      <h1 class="homePageHeader">BrainHR IT Solutions</h1>
+      <p>
+        First and foremost, We would like to declare ourselves as being awesome and involved in all the cutting edge software development technologies.
+        Our team has is relentless and works hard to provide you with the best customer experience possible in this measly realm.
+      </p>
+      <h3>Who we are</h3>
+      <p>We are a group of highly motivated software consultants who strive to provide you with the best product that fits your needs.</p>
+      <h3>What we do</h3>
+      <p>It is our job to assign our most qualified software team to your software requirements. Small scale or large, your requirements are our greatest priority
+        and you can be assured that it is in capable hands.</p>
+      <h3>Why we do it</h3>
+      <p>Because we do what we love and what could be more fun than aiding people in the field that we are interested in?</p>
+    </div>
+
+  </div>
+  <div class="panel2" id="navClients">
+    <h1 class="homePageHeader">Careers</h1>
+    <h3>Web Developer - Project Lead</h3>
+    <p><b>Description:</b>
+      Provides technology-enabled solutions to address complex business problems. Participates in and provides input into the design, re-design, and development of technology products and applications.  Contributes to and often leads the specification and software design phases of the software development life cycle.  Participates in the design and implementation of new software development and enhancement efforts, and coordinates systems installation and software testing with other technologists.<br>
+      <b>Required Experience:</b> 5 years<br>
+      <b>Required Skillset:</b> HTML, CSS, Android Application Development Toolkit, Python, Javascript<br>
+      <b>Additional Skillset:</b> C++, C#<br>
+      <b>Upload Resume</b> <input type="file" name="uploadResume" accept=".pdf"></p>
+    <h3>Android Application developer - Project Lead</h3>
+    <p><b>Description:</b>
+      Provides technology-enabled solutions to address complex business problems. Participates in and provides input into the design, re-design, and development of technology products and applications.  Contributes to and often leads the specification and software design phases of the software development life cycle.  Participates in the design and implementation of new software development and enhancement efforts, and coordinates systems installation and software testing with other technologists.<br>
+      <b>Required Experience:</b> 5 years<br>
+      <b>Required Skillset:</b> HTML, CSS, Android Application Development Toolkit, Python, Javascript<br>
+      <b>Additional Skillset:</b> C++, C#<br>
+      <b>Upload Resume</b> <input type="file" name="uploadResume" accept=".pdf"></p>
+  </div>
+
+  <div class="panel1" id="navServices">
+    <h1 class="homePageHeader">Services</h1>
+    <h3>Front-End</h3>
+    <p>Innovative UI Design</br>
+      Ingenious Application Design</p>
+    <h3>Back-End</h3>
+    <p>Sturdy Databases<br>
+      Reliable Data Storage</p>
+  </div>
+
+  <div class="panel2" id="navContactUs" >
+    <h1 class="homePageHeader">Contact</h1>
+    <div class="container">
+      <form class="form-horizontal" name="contactForm">
+        <div class="well">
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="form-group">
+                <div class="col-lg-1">
+                  <span class="fa fa-user fa-fw " style="font-size:25px"></span>
+                </div>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control"  placeholder="*Name" ng-model="contactName" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-1">
+                  <span class="fa fa-envelope-o fa-fw" style="font-size:25px"></span>
+                </div>
+                <div class="col-lg-10">
+                  <input type="email" class="form-control"  placeholder="*Email" ng-model="contactEmail" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-1">
+                  <span class="fa fa-phone fa-fw" style="font-size:25px"></span>
+                </div>
+                <div class="col-lg-10">
+                  <input type="text" class="form-control"  placeholder="*Phone" ng-model="contactPhone" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-1">
+                  <span class="fa fa-pencil-square-o" style="font-size:25px"></span>
+                </div>
+                <div class="col-lg-10">
+                  <textarea rows="4" cols="40" class="form-control" placeholder="*Message" ng-model="contactMessage"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class=" col-lg-offset-4 col-lg-4">
+                  <button type="submit" class="btn center-block" ng-click="send()"> <span class="fa fa-paper-plane-o"></span> Send</button>
+                </div>
+              </div>
+            </div>
+            <div class= "col-lg-6 pull-right" style="font-size:18px">
+
+              <div class="form-group">
+                <div class="col-lg-offset-6 col-lg-6">
+                  <div class="center-block">
+                    <h4><b> Reach us at</b></h4>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="fa fa-map-marker col-lg-offset-5 col-lg-1" style="font-size:22px"> </span>
+                <div class="col-lg-5" > Brain Hr It Solutions</br>
+                  suit #216, abctderrssdd</br>
+                  New Jersey, 08830.
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="fa fa-phone  col-lg-offset-5 col-lg-1" style="font-size:22px"> </span>
+                <div class="col-lg-5" > +1 (504)-541-8933
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="fa fa-envelope  col-lg-offset-5 col-lg-1" style="font-size:22px"> </span>
+                <div class="col-lg-5" > brainHr@brainhrit.com
+                </div>
+              </div>
+              <div class="form-group">
+                <span class="fa fa-globe col-lg-offset-5 col-lg-1" style="font-size:22px"> </span>
+                <div class="col-lg-5" > Brainhritsolutions.com
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div ng-view></div>
+
+<footer class="homePageFooter">
+  BrainHR IT solutions
+</footer>
+
+</body>
+</html>
