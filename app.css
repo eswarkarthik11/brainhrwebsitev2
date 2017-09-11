@@ -4,6 +4,12 @@ body
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
+/*logo*/
+.logoHR
+{
+    color: #ff8d3f;
+}
+
 /* Show or hide Index page main div element */
 .show {
     display: block !important;
@@ -13,18 +19,22 @@ body
     visibility: hidden !important;
 }
 
-/* Configure login button */
-
-
 /* configure top panel */
-nav.topPanel{
+header.topPanel{
     position: fixed;
     float: right;
     width:100%;
     background-color: #353c3f;
 }
-nav.topPanel a{
+header.topPanel a{
+    color: #ffffff;
     text-decoration: none;
+}
+a.topPanelLogo{
+    float: left;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 10px;
 }
 nav.topPanel1 {
     top:0px;
@@ -59,13 +69,15 @@ h1.homePageHeader{
 div.homeIntro{
     padding: 150px;
     color: #ff8d3f;
+    text-align: center;
 }
-div.shownQuote{
-    float: left;
+.shownQuote{
+
 }
-div.hiddenQuote{
-    float: right;
+.hiddenQuote{
+
 }
+
 
 /* Index page panel effect */
 div.panel1{

@@ -24,22 +24,30 @@ angular.module('homePageApp', [
         $scope.loginStatus="";
     }
     $scope.moveQuote = function(){
-        $("#quote1").animate({
-            left: '-100',
-            opacity: '0'
-        });
-        $("#quote2").animate({
-            left: '0',
-            opacity: '1'
-        });
     }
 })
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.when('/login',{
-        template: "<loginpage></loginpage>"
+        template: "<loginPage></loginPage>"
     })}])
-.component('loginpage', {
+.component('loginPage', {
     templateUrl: "login/login.html",
     controller:"loginController"
+});
+
+/*Smooth scroll effect*/
+$(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
 });

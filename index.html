@@ -24,27 +24,32 @@
 
 <body ng-app="homePageApp" ng-controller="homeController" data-spy="scroll" data-target="#nav-topPanel2">
 
-<nav id="nav-topPanel1" class="navbar justify-content-end topPanel topPanel1">
-  <a href="#!login" ng-class="loginStatus" ng-click="homeVisibilityHide()">Login</a>
-</nav>
-<nav id="nav-topPanel2" class="navbar justify-content-end topPanel topPanel2">
-  <ul class="nav">
-    <li class="nav-item">
-      <a class="nav-link active" href="#navAboutUs" ng-click="homeVisibilityShow()">About Us</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#navClients" ng-click="homeVisibilityShow()">Our Clients</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#navServices" ng-click="homeVisibilityShow()">Services</a>
-    <li class="nav-item">
-      <a class="nav-link" href="#navContactUs" ng-click="homeVisibilityShow()">Contact Us</a>
-    </li>
-  </ul>
-</nav>
+<header class="topPanel">
+    <div><a class="nav-link topPanelLogo" href="#navHome" ng-click="homeVisibilityShow()">Brain<span class="logoHR">HR</span>
+    IT Solutions
+    </a></div>
+  <nav id="nav-topPanel1" class="navbar justify-content-end topPanel1">
+    <a href="#!login" ng-class="loginStatus" ng-click="homeVisibilityHide()">Login</a>
+  </nav>
+  <nav id="nav-topPanel2" class="navbar justify-content-end topPanel2">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active" href="#navAboutUs" ng-click="homeVisibilityShow()">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#navClients" ng-click="homeVisibilityShow()">Our Clients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#navServices" ng-click="homeVisibilityShow()">Services</a>
+      <li class="nav-item">
+        <a class="nav-link" href="#navContactUs" ng-click="homeVisibilityShow()">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 <div ng-class="homeVisibility">
-  <div class="container homeIntro">
+  <div id="navHome" class="homeIntro">
     <div id="quote1" ng-class="quote1Class">
       <p>"Great vision without great people is irrelevant"</p>
       <footer>Jim Collins</footer>
@@ -61,7 +66,6 @@
         <footer>Manik Baasha</footer>
       </blockquote>
     </div>
-    <input type="button" id="moveQuoteButton" value="clickme" ng-click="moveQuote()">
   </div>
 
   <div class="panel1" id="navAboutUs" >
