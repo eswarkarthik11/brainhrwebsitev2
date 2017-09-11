@@ -4,6 +4,13 @@ body
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 
+div.loginPageMain
+{
+    height: 687px;
+    width: 100%;
+    overflow: hidden;
+}
+
 /*logo*/
 .logoHR
 {

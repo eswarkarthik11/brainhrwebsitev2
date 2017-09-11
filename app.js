@@ -9,6 +9,7 @@ angular.module('homePageApp', [
 
     //Initializing Index page main div element visibility
     $scope.homeVisibility="show";
+    $scope.loginPageVisibility="hidden";
 
     //Inializing quotes classes
     $scope.quote1Class="shownQuote";
@@ -17,10 +18,12 @@ angular.module('homePageApp', [
 
     $scope.homeVisibilityHide = function () {
         $scope.homeVisibility="hidden";
+        $scope.loginPageVisibility="show";
         $scope.loginStatus="active";
     }
     $scope.homeVisibilityShow = function () {
         $scope.homeVisibility="show";
+        $scope.loginPageVisibility="hidden";
         $scope.loginStatus="";
     }
     $scope.moveQuote = function(){
@@ -29,16 +32,16 @@ angular.module('homePageApp', [
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.when('/login',{
-        template: "<loginPage></loginPage>"
+        template: "<loginpage></loginpage>"
     })}])
-.component('loginPage', {
+.component('loginpage', {
     templateUrl: "login/login.html",
     controller:"loginController"
 });
 
 /*Smooth scroll effect*/
 $(document).ready(function(){
-    $('a[href^="#"]').on('click',function (e) {
+    $('a[href^="#nav"]').on('click',function (e) {
         e.preventDefault();
 
         var target = this.hash;
