@@ -5,7 +5,7 @@ angular.module('homePageApp', [
     'ngRoute','homePageApp.login'])
 .controller('homeController',function ($scope) {
     //Initializing login button class
-    //$scope.loginStatus=""
+    $scope.loginStatus="";
 
     //Initializing Index page main div element visibility
     $scope.homeVisibility="show";
@@ -17,10 +17,11 @@ angular.module('homePageApp', [
 
     $scope.homeVisibilityHide = function () {
         $scope.homeVisibility="hidden";
-        //$scope.loginStatus='active';
+        $scope.loginStatus="active";
     }
     $scope.homeVisibilityShow = function () {
         $scope.homeVisibility="show";
+        $scope.loginStatus="";
     }
     $scope.moveQuote = function(){
         $("#quote1").animate({

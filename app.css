@@ -18,14 +18,36 @@ body
 
 /* configure top panel */
 nav.topPanel{
+    position: fixed;
+    float: right;
+    width:100%;
     background-color: #353c3f;
 }
 nav.topPanel a{
+    text-decoration: none;
+}
+nav.topPanel1 {
+    top:0px;
+    height:15px;
+}
+nav.topPanel1 a{
+    color: #ffffff;
+    font-size: 12px;
+    padding: 0 15px 0 15px;
+}
+nav.topPanel1 a.active{
+    color: #ff8d3f;
+}
+nav.topPanel2{
+    top:15px;
+}
+nav.topPanel2 a{
     color: #ffffff;
 }
-nav.topPanel a.active{
+nav.topPanel2 a.active{
     color: #ff8d3f;
-  }
+}
+
 
 /* Index page content headers */
 h1.homePageHeader{
@@ -50,14 +72,14 @@ div.panel1{
     background-color: #353c3f;
     color: #ffffff;
     height: 100%;
-    padding: 50px 150px 150px 150px;
+    padding: 65px 150px 150px 150px;
 }
 
 div.panel2{
     background-color: #ffffff;
     color: 	#353c3f;
     height: 100%;
-    padding: 50px 150px 150px 150px;
+    padding: 65px 150px 150px 150px;
 }
 
 /* Index page footer */

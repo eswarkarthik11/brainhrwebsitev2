@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="libraries/fontawesome/css/font-awesome.css">
 
   <!-- Javascript libraries -->
+
   <script src="libraries/jquery-3.2.1.js"></script>
   <script src="libraries/popper.js-1.12.5/dist/umd/popper.js"></script>
   <script src="libraries/bootstrap/js/bootstrap.js"></script>
@@ -23,10 +24,10 @@
 
 <body ng-app="homePageApp" ng-controller="homeController" data-spy="scroll" data-target="#nav-topPanel2">
 
-<nav id="nav-topPanel1" class="navbar justify-content-end topPanel">
-  <a href="#!login" ng-click="homeVisibilityHide()">Login</a>
+<nav id="nav-topPanel1" class="navbar justify-content-end topPanel topPanel1">
+  <a href="#!login" ng-class="loginStatus" ng-click="homeVisibilityHide()">Login</a>
 </nav>
-<nav id="nav-topPanel2" class="navbar justify-content-end topPanel">
+<nav id="nav-topPanel2" class="navbar justify-content-end topPanel topPanel2">
   <ul class="nav">
     <li class="nav-item">
       <a class="nav-link active" href="#navAboutUs" ng-click="homeVisibilityShow()">About Us</a>
